@@ -28,8 +28,7 @@ def main():
 
     #### YOUR CODE HERE####
     url = "https://en.wikipedia.org/wiki/University_of_Michigan"
-    r = requests.get(url).text
-    soup = BeautifulSoup(r, 'html.parser')
+    soup = BeautifulSoup(requests.get(url).text, 'html.parser')
     #Call the functions getLink(soup) and getAdmissionsInfo2019(soup) on your soup object.
     getLink(soup)
     getAdmissionsInfo2019(soup)
